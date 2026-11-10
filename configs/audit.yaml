@@ -1,0 +1,5 @@
+# Ground-truth audit of a generated experiment. Set experiment_dir to the folder
+# that the generator wrote (output/.../experiment_<timestamp>).
+experiment_dir: output/reference/experiment_YYYYMMDD_HHMMSS
+min_effect: 0.01  # causes below it are reported as weak; any non-zero effect passes
+sensor_n_jobs: -1

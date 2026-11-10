@@ -1,0 +1,45 @@
+# Configured against realised shares (python -m checks.realised_shares --config configs/checks/realised_shares.yaml).
+# Generate every configuration below first; the check reads each one's latest experiment under its output.directory.
+output: output/checks/realised_shares.json
+folds: 5            # cross-validation folds, split by batch
+ridge_alpha: 0.001  # ridge penalty on standardised columns
+reference: configs/reference.yaml
+
+# One share at a time, all else at the reference; "reference" stands for the reference configuration.
+sweeps:
+  signal:
+    - configs/interactions/signal_0.05.yaml
+    - configs/shares_extreme/signal_0.1.yaml
+    - configs/shares_extreme/signal_0.2.yaml
+    - configs/shares/signal_0.4.yaml
+    - reference
+    - configs/shares/signal_0.9.yaml
+  upstream:
+    - configs/shares/echo_0.1.yaml
+    - reference
+    - configs/shares/echo_0.6.yaml
+    - configs/shares_extreme/echo_0.8.yaml
+  downstream:
+    - configs/shares/conseq_0.1.yaml
+    - reference
+    - configs/shares/conseq_0.5.yaml
+  interaction:
+    - reference
+    - configs/interactions/interaction_0.25.yaml
+    - configs/interactions/interaction_0.5.yaml
+    - configs/interactions/interaction_0.75.yaml
+    - configs/interactions/interaction_1.0.yaml
+
+# Each confounder setting with its twin without the within-batch confounder (same seed, same plants).
+confounder:
+  reference_without: configs/checks/reference_no_within.yaml
+  settings:
+    - {config: configs/shares/confound_0.1.yaml, without: configs/checks/confound_0.1_no_within.yaml}
+    - {config: configs/shares/confound_0.6.yaml, without: configs/checks/confound_0.6_no_within.yaml}
+    - {config: configs/shares_extreme/confound_0.8.yaml, without: configs/checks/confound_0.8_no_within.yaml}
+
+# The reference with both stages of the confounder removed.
+sibling_floor: configs/checks/reference_no_confounder.yaml
+
+# Optional: config file -> experiment folder, for data generated elsewhere than output.directory.
+experiments: {}

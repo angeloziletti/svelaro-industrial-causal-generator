@@ -1,0 +1,863 @@
+{
+ "about": "The points of the paper's difficulty map (Appendix 'Difficulty measured on the data'), for comparison with python -m checks.difficulty_map.",
+ "points": [
+  {
+   "set": "single",
+   "configuration": "configs/shares/confound_0.1.yaml",
+   "strength": 653.379855,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares/confound_0.6.yaml",
+   "strength": 498.116957,
+   "lookalike_share": 0.0125
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares/conseq_0.1.yaml",
+   "strength": 568.577502,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares/conseq_0.5.yaml",
+   "strength": 568.577502,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares/control_0.3.yaml",
+   "strength": 320.691305,
+   "lookalike_share": 0.040278
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares/control_0.6.yaml",
+   "strength": 321.313052,
+   "lookalike_share": 0.028472
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares/control_1.0.yaml",
+   "strength": 321.716606,
+   "lookalike_share": 0.034028
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares/echo_0.1.yaml",
+   "strength": 628.302417,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares/echo_0.6.yaml",
+   "strength": 474.392243,
+   "lookalike_share": 0.00625
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares/signal_0.4.yaml",
+   "strength": 161.866749,
+   "lookalike_share": 0.012917
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares/signal_0.9.yaml",
+   "strength": 1196.825204,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares_extreme/causes_4to6.yaml",
+   "strength": 113.045919,
+   "lookalike_share": 0.052747
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/shares_extreme/combo_extreme.yaml",
+   "strength": 20.185539,
+   "lookalike_share": 0.099779
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/shares_extreme/combo_hard.yaml",
+   "strength": 74.742054,
+   "lookalike_share": 0.0575
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares_extreme/confound_0.8.yaml",
+   "strength": 446.885538,
+   "lookalike_share": 0.05125
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares_extreme/echo_0.8.yaml",
+   "strength": 407.746228,
+   "lookalike_share": 0.025417
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares_extreme/signal_0.1.yaml",
+   "strength": 23.353181,
+   "lookalike_share": 0.228603
+  },
+  {
+   "set": "single",
+   "configuration": "configs/shares_extreme/signal_0.2.yaml",
+   "strength": 57.114863,
+   "lookalike_share": 0.025049
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/interactions/combo_interaction.yaml",
+   "strength": 0.121716,
+   "lookalike_share": 0.200074
+  },
+  {
+   "set": "single",
+   "configuration": "configs/interactions/control_weak.yaml",
+   "strength": 43.415771,
+   "lookalike_share": 0.13183
+  },
+  {
+   "set": "reference",
+   "configuration": "configs/reference.yaml",
+   "strength": 568.577502,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/interactions/interaction_0.25.yaml",
+   "strength": 346.213046,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/interactions/interaction_0.5.yaml",
+   "strength": 211.960295,
+   "lookalike_share": 0.006667
+  },
+  {
+   "set": "single",
+   "configuration": "configs/interactions/interaction_0.75.yaml",
+   "strength": 104.008466,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/interactions/interaction_1.0.yaml",
+   "strength": 14.460334,
+   "lookalike_share": 0.0375
+  },
+  {
+   "set": "single",
+   "configuration": "configs/interactions/signal_0.05.yaml",
+   "strength": 8.105009,
+   "lookalike_share": 0.295392
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/forty_variables/combo_extreme.yaml",
+   "strength": 33.138109,
+   "lookalike_share": 0.200558
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/forty_variables/combo_hard.yaml",
+   "strength": 106.261816,
+   "lookalike_share": 0.081053
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/forty_variables/combo_interaction.yaml",
+   "strength": 0.268109,
+   "lookalike_share": 0.190869
+  },
+  {
+   "set": "single",
+   "configuration": "configs/forty_variables/confound_0.8.yaml",
+   "strength": 489.613851,
+   "lookalike_share": 0.121334
+  },
+  {
+   "set": "single",
+   "configuration": "configs/forty_variables/control_weak.yaml",
+   "strength": 30.029748,
+   "lookalike_share": 0.196531
+  },
+  {
+   "set": "single",
+   "configuration": "configs/forty_variables/default.yaml",
+   "strength": 570.964022,
+   "lookalike_share": 0.005556
+  },
+  {
+   "set": "single",
+   "configuration": "configs/forty_variables/echo_0.8.yaml",
+   "strength": 365.417389,
+   "lookalike_share": 0.022306
+  },
+  {
+   "set": "single",
+   "configuration": "configs/forty_variables/interaction_1.0.yaml",
+   "strength": 8.397277,
+   "lookalike_share": 0.013968
+  },
+  {
+   "set": "single",
+   "configuration": "configs/forty_variables/signal_0.1.yaml",
+   "strength": 34.954405,
+   "lookalike_share": 0.187023
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/fewer_batches/combo_extreme_b100.yaml",
+   "strength": 9.032184,
+   "lookalike_share": 0.198309
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/fewer_batches/combo_extreme_b25.yaml",
+   "strength": 0.0,
+   "lookalike_share": 0.342958
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/fewer_batches/combo_extreme_b50.yaml",
+   "strength": 2.457675,
+   "lookalike_share": 0.226348
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/fewer_batches/combo_hard_b100.yaml",
+   "strength": 40.264635,
+   "lookalike_share": 0.076299
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/fewer_batches/combo_hard_b25.yaml",
+   "strength": 4.48353,
+   "lookalike_share": 0.138946
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/fewer_batches/combo_hard_b50.yaml",
+   "strength": 13.960308,
+   "lookalike_share": 0.176397
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/fewer_batches/combo_interaction_b100.yaml",
+   "strength": 0.576477,
+   "lookalike_share": 0.305784
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/fewer_batches/combo_interaction_b25.yaml",
+   "strength": 0.0,
+   "lookalike_share": 0.398676
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/fewer_batches/combo_interaction_b50.yaml",
+   "strength": 0.0,
+   "lookalike_share": 0.416103
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/confound_0.8_b100.yaml",
+   "strength": 235.556707,
+   "lookalike_share": 0.064167
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/confound_0.8_b25.yaml",
+   "strength": 24.37419,
+   "lookalike_share": 0.094632
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/confound_0.8_b50.yaml",
+   "strength": 84.098573,
+   "lookalike_share": 0.080931
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/control_weak_b100.yaml",
+   "strength": 21.321077,
+   "lookalike_share": 0.177712
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/control_weak_b25.yaml",
+   "strength": 1.221142,
+   "lookalike_share": 0.267623
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/control_weak_b50.yaml",
+   "strength": 7.278912,
+   "lookalike_share": 0.199812
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/default_b100.yaml",
+   "strength": 287.580568,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/default_b25.yaml",
+   "strength": 42.230748,
+   "lookalike_share": 0.0125
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/default_b50.yaml",
+   "strength": 122.522861,
+   "lookalike_share": 0.0125
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/echo_0.8_b100.yaml",
+   "strength": 184.820355,
+   "lookalike_share": 0.025417
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/echo_0.8_b25.yaml",
+   "strength": 33.784337,
+   "lookalike_share": 0.057083
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/echo_0.8_b50.yaml",
+   "strength": 93.448893,
+   "lookalike_share": 0.044583
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/interaction_1.0_b100.yaml",
+   "strength": 5.085756,
+   "lookalike_share": 0.052083
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/interaction_1.0_b25.yaml",
+   "strength": 0.0,
+   "lookalike_share": 0.180049
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/interaction_1.0_b50.yaml",
+   "strength": 0.0,
+   "lookalike_share": 0.072083
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/signal_0.1_b100.yaml",
+   "strength": 13.483681,
+   "lookalike_share": 0.30674
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/signal_0.1_b25.yaml",
+   "strength": 0.0,
+   "lookalike_share": 0.384232
+  },
+  {
+   "set": "single",
+   "configuration": "configs/fewer_batches/signal_0.1_b50.yaml",
+   "strength": 5.231451,
+   "lookalike_share": 0.210784
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/all_knobs.yaml",
+   "strength": 63.47127,
+   "lookalike_share": 0.048578
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/imperfections/all_knobs_combo_interaction.yaml",
+   "strength": 1.146148,
+   "lookalike_share": 0.317132
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/all_knobs_s40.yaml",
+   "strength": 77.285415,
+   "lookalike_share": 0.091525
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/context_0.25.yaml",
+   "strength": 476.632429,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/context_0.5.yaml",
+   "strength": 313.653071,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/context_0.75.yaml",
+   "strength": 222.625686,
+   "lookalike_share": 0.025417
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/context_0.75_b50.yaml",
+   "strength": 61.22498,
+   "lookalike_share": 0.082132
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/imperfections/context_0.75_combo_interaction.yaml",
+   "strength": 0.0,
+   "lookalike_share": 0.334951
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/context_0.75_s40.yaml",
+   "strength": 219.500448,
+   "lookalike_share": 0.016746
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/context_1.0.yaml",
+   "strength": 130.400736,
+   "lookalike_share": 0.025417
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/cumul_0.25.yaml",
+   "strength": 316.542898,
+   "lookalike_share": 0.00625
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/cumul_0.5.yaml",
+   "strength": 273.904552,
+   "lookalike_share": 0.00625
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/cumul_0.75.yaml",
+   "strength": 222.448575,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/cumul_0.75_b50.yaml",
+   "strength": 71.166216,
+   "lookalike_share": 0.032083
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/imperfections/cumul_0.75_combo_interaction.yaml",
+   "strength": 1.745127,
+   "lookalike_share": 0.190662
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/cumul_0.75_s40.yaml",
+   "strength": 310.245408,
+   "lookalike_share": 0.005556
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/cumul_1.0.yaml",
+   "strength": 312.835446,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/jitter_0.25.yaml",
+   "strength": 560.619423,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/jitter_0.5.yaml",
+   "strength": 520.531213,
+   "lookalike_share": 0.00625
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/jitter_0.75.yaml",
+   "strength": 441.854694,
+   "lookalike_share": 0.00625
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/jitter_0.75_b50.yaml",
+   "strength": 87.801741,
+   "lookalike_share": 0.019583
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/imperfections/jitter_0.75_combo_interaction.yaml",
+   "strength": 0.0,
+   "lookalike_share": 0.153897
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/jitter_0.75_s40.yaml",
+   "strength": 385.006593,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/jitter_1.0.yaml",
+   "strength": 376.3165,
+   "lookalike_share": 0.00625
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/meas_0.1.yaml",
+   "strength": 471.213807,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/meas_0.2.yaml",
+   "strength": 389.952851,
+   "lookalike_share": 0.006667
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/meas_0.3.yaml",
+   "strength": 318.17584,
+   "lookalike_share": 0.00625
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/meas_0.3_b50.yaml",
+   "strength": 47.697591,
+   "lookalike_share": 0.044583
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/imperfections/meas_0.3_combo_interaction.yaml",
+   "strength": 0.178924,
+   "lookalike_share": 0.353897
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/meas_0.3_s40.yaml",
+   "strength": 261.501594,
+   "lookalike_share": 0.011111
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/meas_0.5.yaml",
+   "strength": 184.277068,
+   "lookalike_share": 0.019216
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/operator_0.1.yaml",
+   "strength": 549.89269,
+   "lookalike_share": 0.012917
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/operator_0.2.yaml",
+   "strength": 511.296823,
+   "lookalike_share": 0.00625
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/operator_0.3.yaml",
+   "strength": 478.839634,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/operator_0.3_b50.yaml",
+   "strength": 137.302692,
+   "lookalike_share": 0.042696
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/imperfections/operator_0.3_combo_interaction.yaml",
+   "strength": 3.400789,
+   "lookalike_share": 0.078382
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/operator_0.3_s40.yaml",
+   "strength": 466.875134,
+   "lookalike_share": 0.008333
+  },
+  {
+   "set": "single",
+   "configuration": "configs/imperfections/operator_0.5.yaml",
+   "strength": 378.323632,
+   "lookalike_share": 0.006667
+  },
+  {
+   "set": "single",
+   "configuration": "configs/edge_types/no_parameter_edges.yaml",
+   "strength": 580.473987,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/edge_types/no_temporal_edges.yaml",
+   "strength": 525.447993,
+   "lookalike_share": 0.005882
+  },
+  {
+   "set": "single",
+   "configuration": "configs/recipe_phases/phase_0.25.yaml",
+   "strength": 579.830396,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/recipe_phases/phase_0.5.yaml",
+   "strength": 575.580194,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/recipe_phases/phase_0.75.yaml",
+   "strength": 568.742766,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/recipe_phases/phase_0.75_b50.yaml",
+   "strength": 122.987243,
+   "lookalike_share": 0.00625
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/recipe_phases/phase_0.75_combo_interaction.yaml",
+   "strength": 0.052304,
+   "lookalike_share": 0.18223
+  },
+  {
+   "set": "single",
+   "configuration": "configs/recipe_phases/phase_0.75_s40.yaml",
+   "strength": 588.259488,
+   "lookalike_share": 0.005556
+  },
+  {
+   "set": "single",
+   "configuration": "configs/recipe_phases/phase_0.9.yaml",
+   "strength": 560.307452,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/lots_and_drift/drift_0.1.yaml",
+   "strength": 558.642465,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/lots_and_drift/drift_0.3.yaml",
+   "strength": 561.163086,
+   "lookalike_share": 0.00625
+  },
+  {
+   "set": "single",
+   "configuration": "configs/lots_and_drift/lot_0.25.yaml",
+   "strength": 528.594464,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "single",
+   "configuration": "configs/lots_and_drift/lot_0.5.yaml",
+   "strength": 502.087563,
+   "lookalike_share": 0.006667
+  },
+  {
+   "set": "single",
+   "configuration": "configs/lots_and_drift/lot_0.5_drift_0.2.yaml",
+   "strength": 521.243467,
+   "lookalike_share": 0.006667
+  },
+  {
+   "set": "single",
+   "configuration": "configs/lots_and_drift/lot_0.5_drift_0.2_b50.yaml",
+   "strength": 112.116208,
+   "lookalike_share": 0.012917
+  },
+  {
+   "set": "combined",
+   "configuration": "configs/lots_and_drift/lot_0.5_drift_0.2_combo_interaction.yaml",
+   "strength": 0.0,
+   "lookalike_share": 0.149461
+  },
+  {
+   "set": "single",
+   "configuration": "configs/lots_and_drift/lot_0.5_drift_0.2_s40.yaml",
+   "strength": 548.372464,
+   "lookalike_share": 0.016746
+  },
+  {
+   "set": "single",
+   "configuration": "configs/lots_and_drift/lot_0.75.yaml",
+   "strength": 477.915608,
+   "lookalike_share": 0.006667
+  },
+  {
+   "set": "single",
+   "configuration": "configs/lots_and_drift/lot_0.9.yaml",
+   "strength": 465.087615,
+   "lookalike_share": 0.012917
+  },
+  {
+   "set": "te",
+   "problem": "te/X7",
+   "strength": 0.0,
+   "lookalike_share": 0.967742
+  },
+  {
+   "set": "te",
+   "problem": "te/X8",
+   "strength": 1558.105131,
+   "lookalike_share": 0.322581
+  },
+  {
+   "set": "te",
+   "problem": "te/X13",
+   "strength": 5637.954165,
+   "lookalike_share": 0.129032
+  },
+  {
+   "set": "te",
+   "problem": "te/X14",
+   "strength": 0.0,
+   "lookalike_share": 0.032258
+  },
+  {
+   "set": "te",
+   "problem": "te/X15",
+   "strength": 0.0,
+   "lookalike_share": 0.806452
+  },
+  {
+   "set": "te",
+   "problem": "te/X16",
+   "strength": 0.0,
+   "lookalike_share": 0.774194
+  },
+  {
+   "set": "te",
+   "problem": "te/X17",
+   "strength": 264.947452,
+   "lookalike_share": 0.870968
+  },
+  {
+   "set": "te",
+   "problem": "te/X18",
+   "strength": 17.032064,
+   "lookalike_share": 0.870968
+  },
+  {
+   "set": "te",
+   "problem": "te/X19",
+   "strength": 26.620638,
+   "lookalike_share": 0.967742
+  },
+  {
+   "set": "te",
+   "problem": "te/X20",
+   "strength": 1779.975879,
+   "lookalike_share": 0.548387
+  },
+  {
+   "set": "te",
+   "problem": "te/X22",
+   "strength": 1068.448684,
+   "lookalike_share": 0.032258
+  },
+  {
+   "set": "te",
+   "problem": "te/X23",
+   "strength": 0.0,
+   "lookalike_share": 0.290323
+  },
+  {
+   "set": "te",
+   "problem": "te/X24",
+   "strength": 116.675818,
+   "lookalike_share": 0.064516
+  },
+  {
+   "set": "te",
+   "problem": "te/X25",
+   "strength": 0.0,
+   "lookalike_share": 0.193548
+  },
+  {
+   "set": "te",
+   "problem": "te/X26",
+   "strength": 0.0,
+   "lookalike_share": 0.032258
+  },
+  {
+   "set": "te",
+   "problem": "te/X29",
+   "strength": 178.380184,
+   "lookalike_share": 0.774194
+  },
+  {
+   "set": "te",
+   "problem": "te/X30",
+   "strength": 320.575977,
+   "lookalike_share": 0.258065
+  },
+  {
+   "set": "te",
+   "problem": "te/X31",
+   "strength": 349.770833,
+   "lookalike_share": 0.290323
+  },
+  {
+   "set": "te",
+   "problem": "te/X32",
+   "strength": 0.0,
+   "lookalike_share": 0.0
+  },
+  {
+   "set": "te",
+   "problem": "te/X33",
+   "strength": 15.030089,
+   "lookalike_share": 0.451613
+  },
+  {
+   "set": "indpensim",
+   "problem": "indpensim/recipe",
+   "strength": 388.850385,
+   "lookalike_share": 0.666667
+  },
+  {
+   "set": "indpensim",
+   "problem": "indpensim/operator",
+   "strength": 0.0,
+   "lookalike_share": 0.666667
+  },
+  {
+   "set": "indpensim",
+   "problem": "indpensim/apc",
+   "strength": 31.040065,
+   "lookalike_share": 0.75
+  },
+  {
+   "set": "uf",
+   "problem": "uf/X17",
+   "strength": 57.374799,
+   "lookalike_share": 0.833333
+  }
+ ]
+}

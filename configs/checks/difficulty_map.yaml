@@ -1,0 +1,57 @@
+# The paper's difficulty map (python -m checks.difficulty_map --config configs/checks/difficulty_map.yaml).
+# Generate the configurations first; the check reads each one's latest experiment under its output.directory.
+output: output/checks/difficulty_map.json
+compare_with: checks/difficulty_map_paper.json   # the paper figure's points; leave empty to skip the comparison
+resolution: checks/difficulty_map_resolution.csv  # factor and n_lags per configuration, as used in the paper
+folds: 5            # cross-validation folds, split by batch
+ridge_alpha: 0.001  # ridge penalty on standardised columns
+mi_rows: 4000       # k-NN mutual information on a fixed random subsample of rows (seed 0)
+reference: configs/reference.yaml
+configurations: []  # empty = all 119; or a list of configuration files
+experiment_dirs: {} # optional: configuration file -> experiment folder, e.g. {configs/reference.yaml: samples}
+
+# Public problems, optional: set the paths to the files as their authors publish them (see the README); a problem
+# whose paths are empty is skipped.
+public:
+  te:          # Tennessee Eastman, the classic test runs; graph from CIPCaD-Bench
+    runs_dir: ""   # folder with d00_te.dat ... d21_te.dat
+    graph: ""      # TEGroundTruth.txt
+  indpensim:   # penicillin fermentation, 100-batch release (Mendeley, doi 10.17632/pdnjz7zz5x.1)
+    data: ""       # the release's CSV (or a parquet with the same columns)
+    time_column: "Time (h)"
+    regimes: {recipe: [1, 30], operator: [31, 60], apc: [61, 90]}   # batches, inclusive
+    columns:       # release column -> short name; P is the penicillin concentration, the target is its change dP
+      "Aeration rate(Fg:L/h)": Fg
+      "Sugar feed rate(Fs:L/h)": Fs
+      "Acid flow rate(Fa:L/h)": Fa
+      "Base flow rate(Fb:L/h)": Fb
+      "Heating/cooling water flow rate(Fc:L/h)": Fc
+      "Heating water flow rate(Fh:L/h)": Fh
+      "Water for injection/dilution(Fw:L/h)": Fw
+      "Air head pressure(pressure:bar)": pressure
+      "Dumped broth flow(Fremoved:L/h)": Fremoved
+      "Substrate concentration(S:g/L)": S
+      "Dissolved oxygen concentration(DO2:mg/L)": DO2
+      "Penicillin concentration(P:g/L)": P
+      "Vessel Volume(V:L)": V
+      "Vessel Weight(Wt:Kg)": Wt
+      "pH(pH:pH)": pH
+      "Temperature(T:K)": T
+      "Generated heat(Q:kJ)": Q
+      "carbon dioxide percent in off-gas(CO2outgas:%)": CO2outgas
+      "PAA flow(Fpaa:PAA flow (L/h))": Fpaa
+      "Oil flow(Foil:L/hr)": Foil
+      "Oxygen Uptake Rate(OUR:(g min^{-1}))": OUR
+      "Oxygen in percent in off-gas(O2:O2  (%))": O2
+      "Carbon evolution rate(CER:g/h)": CER
+    roles:         # with respect to dP, from the simulator's equations
+      causes: [S, DO2, pH, T, V, Fpaa, Fs, Fa, Fb, Fw]   # observable one-hop parents
+      ancestors: [Foil, Fg, Fh, Fc, pressure]            # observable two-hop
+      descendants: [CER, OUR, CO2outgas, O2, Q, Wt, Fremoved]
+  uf:          # the food-processing line of CIPCaD-Bench, a real plant
+    csv: ""        # UF.csv
+    sampling_seconds: 300
+    min_rows: 100
+    target: X17
+    causes: [X13, X14, X15, X16]   # the last stage; earlier stages are ancestors
+    candidates: [X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, X11, X12, X13, X14, X15, X16]

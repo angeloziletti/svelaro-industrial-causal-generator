@@ -1,0 +1,164 @@
+metadata:
+  name: industrial_causal_generator
+  description: Batch process with one target, raw curves and observed batch attributes exported.
+dataset_generation:
+  n_samples: 25
+  length: 512
+  seed: 13579
+  target_defect_rates: {}
+batch_generation:
+  n_graphs: 10
+  n_realizations_per_graph: 1
+scm_settings:
+  use_dynamic_graph: true
+  vector_dim: 8
+  min_base_nodes: 8
+  max_base_nodes: 12
+temporal:
+  enable_temporal: false
+  temporal_generation_method: pattern
+  export_temporal_data: true
+  samples_per_context: 1
+gp_parameter_layer:
+  enable_gp_layer: true
+  auto_select_temporal_sensors: true
+  min_temporal_sensors: 20
+  max_temporal_sensors: 20
+  n_temporal_red_herrings: 17
+  sensor_n_jobs: -1
+  n_truths:
+  - 1
+  - 4
+pattern_settings:
+  patterns: critical
+  multi_pattern_ratio: 0.15
+  noise_level: clean
+  residual_scale: 1.0
+time_scale_analysis:
+  enabled: true
+  warmup_min: 0
+  session_column: context_index
+  target_windowing:
+    enabled: true
+    window_min: 0.27
+    context_minutes: 0.4
+    overlap_ratio: 0.2
+    aggregation_method_binary: any
+    aggregation_threshold: 0.5
+  feature_bucketing:
+    buckets_per_sensor: 1
+    strategy: adaptive
+    decay_type: exponential
+    decay_rate: 5.0
+    min_samples_per_bucket: 5
+parameter_layer:
+  trajectory_model: motif_sequence
+  segments_per_sensor:
+  - 2
+  - 4
+  measurement_noise: 0.1
+  causal_params:
+  - onset
+  - amplitude
+  - duration
+  - level
+sensor_graph:
+  enabled: true
+  n_upstream: 2
+  expected_in_degree: 1.0
+  dynamic_edges:
+    enabled: true
+    expected_in_degree: 1.0
+    gain:
+    - 0.3
+    - 0.8
+    time_constant:
+    - 3
+    - 20
+    dead_time:
+    - 0
+    - 5
+control_loops:
+  enabled: true
+  n_loops: 1
+  tightness: 0.0
+  disturbance_gain: 1.0
+  disturbance_time_constant: 10
+  disturbance_dead_time: 3
+shadow_red_herrings:
+  enabled: true
+  confounder_strength_range:
+  - 0.7
+  - 2.5
+  modulation_probability: 0.7
+  modulated_gp_params:
+  - onset
+  - amplitude
+  - duration
+  - level
+  temporal_confounder:
+    enabled: true
+    correlation_length: 60
+    alpha_truth:
+    - 0.3
+    - 1.0
+    alpha_shadow_range:
+    - 0.3
+    - 1.0
+    share_reference: 0.3
+vector_scm:
+  enabled: true
+  defect_operator: lagged_pointwise
+  defect_operator_mix:
+    enabled: true
+    contributions:
+    - operator: lagged_pointwise
+      weight: 0.5
+    - operator: squared
+      weight: 0.5
+    - operator: multiplicative
+      weight: 0.5
+  operators:
+    weight_range:
+    - 0.9
+    - 1.1
+  noise_sigma: 0.1
+  standardize_parents: false
+  dataset_standardize_parents: true
+  per_sample_center: false
+  per_sample_variation:
+    enabled: true
+    amplitude_sigma: 0.15
+    timing_delta: 16
+    event_fire_probability: 0.7
+  target_mechanism: trajectory
+  scalar_mechanism: parameters
+  target_path: null
+  dynamic_target:
+    interaction_probability: 0.0
+  edge_model: dynamic
+  consequences:
+    n:
+    - 2
+    - 3
+    dead_time_tau:
+    - 1.0
+    - 2.0
+  shares:
+    defect_timeseries: 0.15
+    confounder: 0.8
+    consequence: 0.5
+    echo: 0.8
+    unexplained: process
+observability:
+  confounders: false
+  static_attributes: false
+  standardize_sensors: true
+output:
+  directory: output/fewer_batches/combo_extreme_b25
+  create_visualizations: false
+  format: parquet
+  export_tabular: false
+multi_graph_validation:
+  enabled: false
+  n_variants: 1
